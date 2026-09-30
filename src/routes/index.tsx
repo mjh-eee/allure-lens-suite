@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-import heroImg from "@/assets/hero.jpg";
-import aboutImg from "@/assets/about.jpg";
-import trainImg from "@/assets/train.jpg";
-import glowImg from "@/assets/glow.jpg";
+import kettlebellAsset from "@/assets/shammi-kettlebell.jpg.asset.json";
+import studioAsset from "@/assets/shammi-studio.jpg.asset.json";
+import gymAsset from "@/assets/shammi-gym.jpg.asset.json";
+import cardioAsset from "@/assets/shammi-cardio.jpg.asset.json";
+import thumbsUpAsset from "@/assets/shammi-client-thumbsup.jpg.asset.json";
+import selfieGreyAsset from "@/assets/shammi-selfie-grey.jpg.asset.json";
+import selfieBlueAsset from "@/assets/shammi-selfie-blue.jpg.asset.json";
+import teamFlexAsset from "@/assets/shammi-team-flex.jpg.asset.json";
+import muralAsset from "@/assets/shammi-mural.jpg.asset.json";
+
+const heroImg = kettlebellAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -126,7 +133,7 @@ function Hero() {
             <div className="absolute -inset-3 rounded-[2.5rem] bg-accent/40 blur-2xl" aria-hidden="true" />
             <img
               src={heroImg}
-              alt="Shammi Nasrin, fitness and beauty coach, in a warm studio"
+              alt="Shammi Nasrin training with a kettlebell at her gym in Dhaka"
               width={1024}
               height={1280}
               className="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-soft"
@@ -152,8 +159,8 @@ function About() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <img
-            src={aboutImg}
-            alt="Shammi coaching a client through a stretch in her studio"
+            src={studioAsset.url}
+            alt="Shammi Nasrin seated on a gym machine between sets"
             loading="lazy"
             width={1024}
             height={1280}
@@ -283,18 +290,41 @@ function Programs() {
   );
 }
 
-const RESULTS = [
+const GALLERY = [
   {
-    image: trainImg,
-    alt: "Client training with dumbbells in a bright studio",
-    name: "Nadia R.",
-    detail: "Lost 8 kg in 12 weeks with 1:1 training",
+    image: gymAsset.url,
+    alt: "Shammi leaning on a gym machine between sets",
+    caption: "Putting in the work, one session at a time.",
   },
   {
-    image: glowImg,
-    alt: "Close-up of healthy, glowing skin",
-    name: "Tania S.",
-    detail: "Clearer, calmer skin in 6 weeks",
+    image: cardioAsset.url,
+    alt: "Shammi on the elliptical during a cardio session",
+    caption: "Cardio day — steady, consistent, strong.",
+  },
+  {
+    image: thumbsUpAsset.url,
+    alt: "Shammi celebrating a client giving a thumbs up",
+    caption: "Every client win is a win for both of us.",
+  },
+  {
+    image: selfieGreyAsset.url,
+    alt: "Shammi taking a mirror selfie with a client",
+    caption: "Training partners make the hard days easier.",
+  },
+  {
+    image: selfieBlueAsset.url,
+    alt: "Shammi with a client after a workout at the gym",
+    caption: "Sweat now, glow later.",
+  },
+  {
+    image: muralAsset.url,
+    alt: "Shammi with a friend in front of a boxing mural",
+    caption: "Surround yourself with people who push you.",
+  },
+  {
+    image: teamFlexAsset.url,
+    alt: "Shammi and friends flexing after a group workout",
+    caption: "Strong women lift each other up.",
   },
 ];
 
@@ -306,7 +336,7 @@ function Results() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Results</p>
             <h2 className="mt-3 max-w-[18ch] font-display text-4xl font-medium leading-[1.05] tracking-tight sm:text-5xl">
-              Real people, real change.
+              Real training, real life.
             </h2>
           </div>
           <a href="#reviews" className="text-sm font-bold text-primary underline-offset-4 hover:underline">
@@ -314,19 +344,18 @@ function Results() {
           </a>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {RESULTS.map((result) => (
-            <figure key={result.name} className="group">
+          {GALLERY.map((shot) => (
+            <figure key={shot.caption} className="group">
               <img
-                src={result.image}
-                alt={result.alt}
+                src={shot.image}
+                alt={shot.alt}
                 loading="lazy"
                 width={1024}
                 height={1280}
                 className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-soft transition-transform duration-500 group-hover:scale-[1.01]"
               />
               <figcaption className="mt-4 px-1">
-                <p className="font-display text-xl font-semibold">{result.name}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{result.detail}</p>
+                <p className="text-sm font-semibold text-muted-foreground">{shot.caption}</p>
               </figcaption>
             </figure>
           ))}
