@@ -317,6 +317,11 @@ const GALLERY = [
     caption: "Sweat now, glow later.",
   },
   {
+    image: muralAsset.url,
+    alt: "Shammi with a friend in front of a boxing mural",
+    caption: "Surround yourself with people who push you.",
+  },
+  {
     image: teamFlexAsset.url,
     alt: "Shammi and friends flexing after a group workout",
     caption: "Strong women lift each other up.",
