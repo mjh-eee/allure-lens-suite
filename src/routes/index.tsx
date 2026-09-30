@@ -133,7 +133,7 @@ function Hero() {
             <div className="absolute -inset-3 rounded-[2.5rem] bg-accent/40 blur-2xl" aria-hidden="true" />
             <img
               src={heroImg}
-              alt="Shammi Nasrin, fitness and beauty coach, in a warm studio"
+              alt="Shammi Nasrin training with a kettlebell at her gym in Dhaka"
               width={1024}
               height={1280}
               className="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-soft"
@@ -159,8 +159,8 @@ function About() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <img
-            src={aboutImg}
-            alt="Shammi coaching a client through a stretch in her studio"
+            src={studioAsset.url}
+            alt="Shammi Nasrin seated on a gym machine between sets"
             loading="lazy"
             width={1024}
             height={1280}
