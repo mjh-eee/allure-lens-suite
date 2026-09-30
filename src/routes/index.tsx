@@ -292,32 +292,32 @@ function Programs() {
 
 const GALLERY = [
   {
-    image: gymAsset,
+    image: gymAsset.url,
     alt: "Shammi leaning on a gym machine between sets",
     caption: "Putting in the work, one session at a time.",
   },
   {
-    image: cardioAsset,
+    image: cardioAsset.url,
     alt: "Shammi on the elliptical during a cardio session",
     caption: "Cardio day — steady, consistent, strong.",
   },
   {
-    image: thumbsUpAsset,
+    image: thumbsUpAsset.url,
     alt: "Shammi celebrating a client giving a thumbs up",
     caption: "Every client win is a win for both of us.",
   },
   {
-    image: selfieGreyAsset,
+    image: selfieGreyAsset.url,
     alt: "Shammi taking a mirror selfie with a client",
     caption: "Training partners make the hard days easier.",
   },
   {
-    image: selfieBlueAsset,
+    image: selfieBlueAsset.url,
     alt: "Shammi with a client after a workout at the gym",
     caption: "Sweat now, glow later.",
   },
   {
-    image: teamFlexAsset,
+    image: teamFlexAsset.url,
     alt: "Shammi and friends flexing after a group workout",
     caption: "Strong women lift each other up.",
   },
